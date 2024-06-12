@@ -5,14 +5,14 @@ function halveNumber(num) {
   return num / 2;
 }
 
-let result = halveNumber(-7.5);
+let resultTask1 = halveNumber(4);
 
-console.log(result);
+console.log(`Task1 result is  : ${resultTask1}`);
 
-// Define an arrow function to halve a number
+// Define an arrow function to solve Task 1
 
 const arrowHalvenumber = (num) => num / 2;
 
-let res = arrowHalvenumber(8);
+let resTask1 = arrowHalvenumber(8);
 
-console.log(res);
+console.log(`Task1 simple version result is  : ${resTask1}`);
