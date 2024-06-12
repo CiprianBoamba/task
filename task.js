@@ -92,9 +92,8 @@ const filteredArrayTask4 = removeAbove(myArrayTask4, limit);
 console.log(filteredArrayTask4);
 
 // Define an arrow function to solve Task 4
-const arrowRemoveAbove = (arr, limit) => {
-  return arr.filter((element) => element <= limit);
-};
+const arrowRemoveAbove = (arr, limit) =>
+  arr.filter((element) => element <= limit);
 
 const simpleArrayTask4 = [1, 3, 7, 2, 9, 4];
 const limitArrow = 2;
