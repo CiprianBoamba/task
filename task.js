@@ -41,14 +41,14 @@ function countHalvesToLessThanTen() {
     // count = count + 1;
     count++;
 
-    console.log(`${number} and ${count}`);
+    // console.log(`${number} and ${count}`);
   }
 
   return count;
 }
 
 let resultTask3 = countHalvesToLessThanTen();
-console.log(`Task3 result is : ${resultTask3}`);
+// console.log(`Task3 result is : ${resultTask3}`);
 
 // Define an arrow function to solve Task 3
 
@@ -59,11 +59,34 @@ const arrowCountHalvesToLessThanTen = () => {
   while (number >= 10) {
     number = halveNumber(number);
     count++;
-    console.log(`${number} and ${count}`);
+    // console.log(`${number} and ${count}`);
   }
 
   return count;
 };
 
 let resTask3 = arrowCountHalvesToLessThanTen();
-console.log(`Task3 arrow version result is : ${resTask3}`);
+// console.log(`Task3 arrow version result is : ${resTask3}`);
+
+/**Task 4
+Create a function that accepts an array of numbers and returns an array that has had all values above a given number removed.*/
+
+function removeAbove(arr, limit) {
+  const newArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    // console.log(element);
+    if (element <= limit) {
+      newArray.push(element);
+      // console.log(newArray);
+    }
+  }
+
+  return newArray;
+}
+
+const myArrayTask4 = [1, 3, 7, 2, 9, 4];
+const limit = 6;
+const filteredArrayTask4 = removeAbove(myArrayTask4, limit);
+console.log(filteredArrayTask4);
