@@ -8,3 +8,11 @@ function halveNumber(num) {
 let result = halveNumber(-7.5);
 
 console.log(result);
+
+// Define an arrow function to halve a number
+
+const arrowHalvenumber = (num) => num / 2;
+
+let res = arrowHalvenumber(8);
+
+console.log(res);
