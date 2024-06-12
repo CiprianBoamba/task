@@ -87,6 +87,16 @@ function removeAbove(arr, limit) {
 }
 
 const myArrayTask4 = [1, 3, 7, 2, 9, 4];
-const limit = 6;
+const limit = 7;
 const filteredArrayTask4 = removeAbove(myArrayTask4, limit);
 console.log(filteredArrayTask4);
+
+// Define an arrow function to solve Task 4
+const arrowRemoveAbove = (arr, limit) => {
+  return arr.filter((element) => element <= limit);
+};
+
+const simpleArrayTask4 = [1, 3, 7, 2, 9, 4];
+const limitArrow = 2;
+const filteredArray = arrowRemoveAbove(simpleArrayTask4, limitArrow);
+console.log(filteredArray);
