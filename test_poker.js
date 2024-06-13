@@ -32,12 +32,12 @@ function getHandRank(hand) {
       rankCounts[card] = 1;
     }
   }
-  console.log(rankCounts);
+  // console.log(rankCounts);
 
   // Get the counts but in a sort manner
   const counts = Object.values(rankCounts).sort((a, b) => b - a);
 
-  console.log(counts);
+  // console.log(counts);
 
   // Determine the hand rank
   let rankType = '';
@@ -83,10 +83,27 @@ function getHandRank(hand) {
 
 // let four = getHandRank([3, 3, 3, 3, 5]);
 // let full = getHandRank([3, 3, 5, 3, 5]);
-let straight = getHandRank([2, 3, 5, 4, 1]);
-let specialStraight = getHandRank([1, 13, 11, 10, 12]);
-//here need to handle straight
+// let straight = getHandRank([2, 3, 5, 4, 1]);
+// let specialStraight = getHandRank([1, 13, 11, 10, 12]);
 // let three = getHandRank([3, 3, 3, 6, 7]);
 // let twopair = getHandRank([3, 3, 4, 5, 5]);
 // let onepair = getHandRank([3, 3, 4, 5, 6]);
 // let highcard = getHandRank([2, 3, 4, 5, 8]);
+
+// next we need a function to compare hands
+
+function compareHands() {
+  const handRanks = [
+    'High card',
+    'One pair',
+    'Two pair',
+    'Three of a kind',
+    'Straight',
+    'Full House',
+    'Four of a kind',
+  ];
+
+  console.log(handRanks);
+}
+
+let compare = compareHands();
