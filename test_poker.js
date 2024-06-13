@@ -113,6 +113,17 @@ function compareHands(hand1, hand2) {
 
   console.log(`rank1: ${rank1} and rank2: ${rank2}`);
   console.log(`rank1Index: ${rank1Index} and rank2Index: ${rank2Index}`);
+
+  let bestRank = '';
+  if (rank1Index > rank2Index) {
+    bestRank = 'rank 1';
+  } else if (rank1Index < rank2Index) {
+    bestRank = 'rank 2';
+  } else {
+    bestRank = 'draw';
+  }
+
+  console.log(`the best hand is ${bestRank}`);
 }
 
 let compare = compareHands([3, 3, 3, 6, 7], [3, 3, 3, 3, 7]);
