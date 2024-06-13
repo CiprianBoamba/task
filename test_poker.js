@@ -58,7 +58,7 @@ function getHandRank(hand) {
     rankType = 'High card';
   }
 
-  console.log(rankType);
+  // console.log(rankType);
   return rankType;
 
   // function to handdle straight
@@ -92,7 +92,7 @@ function getHandRank(hand) {
 
 // next we need a function to compare hands
 
-function compareHands() {
+function compareHands(hand1, hand2) {
   const handRanks = [
     'High card',
     'One pair',
@@ -103,7 +103,16 @@ function compareHands() {
     'Four of a kind',
   ];
 
-  console.log(handRanks);
+  // console.log(handRanks);
+
+  const rank1 = getHandRank(hand1);
+  const rank2 = getHandRank(hand2);
+
+  const rank1Index = handRanks.indexOf(rank1);
+  const rank2Index = handRanks.indexOf(rank2);
+
+  console.log(`rank1: ${rank1} and rank2: ${rank2}`);
+  console.log(`rank1Index: ${rank1Index} and rank2Index: ${rank2Index}`);
 }
 
-let compare = compareHands();
+let compare = compareHands([3, 3, 3, 6, 7], [3, 3, 3, 3, 7]);
