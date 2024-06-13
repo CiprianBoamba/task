@@ -41,11 +41,28 @@ function getHandRank(hand) {
 
   // Determine the hand rank
   let rankType = '';
+
   if (counts[0] === 4) {
     rankType = 'Four of a kind';
+  } else if (counts[0] === 3 && counts[1] === 2) {
+    rankType = 'Full house';
+  } else if (counts[0] === 3) {
+    rankType = 'Three of a kind';
+  } else if (counts[0] === 2 && counts[1] === 2) {
+    rankType = 'Two pair';
+  } else if (counts[0] === 2) {
+    rankType = 'One pair';
+  } else {
+    rankType = 'High card';
   }
-
   console.log(rankType);
+  return rankType;
 }
 
-let four = getHandRank([3, 3, 3, 3, 5]);
+// let four = getHandRank([3, 3, 3, 3, 5]);
+let full = getHandRank([3, 3, 3, 5, 5]);
+let straight = getHandRank([2, 3, 4, 5, 6]);
+let three = getHandRank([3, 3, 3, 6, 7]);
+let twopair = getHandRank([3, 3, 4, 5, 5]);
+let onepair = getHandRank([3, 3, 4, 5, 6]);
+let highcard = getHandRank([2, 3, 4, 5, 8]);
