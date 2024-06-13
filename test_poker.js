@@ -26,7 +26,6 @@ function getHandRank(hand) {
   const rankCounts = {};
   for (let i = 0; i < hand.length; i++) {
     const card = hand[i];
-    console.log(card);
     if (rankCounts[card]) {
       rankCounts[card]++;
     } else {
@@ -39,7 +38,14 @@ function getHandRank(hand) {
   const counts = Object.values(rankCounts).sort((a, b) => b - a);
 
   console.log(counts);
+
+  // Determine the hand rank
+  let rankType = '';
+  if (counts[0] === 4) {
+    rankType = 'Four of a kind';
+  }
+
+  console.log(rankType);
 }
 
-// let hand = getHandRank([2, 3, 4, 5, 6]);
-let hand = getHandRank([3, 3, 3, 3, 5]);
+let four = getHandRank([3, 3, 3, 3, 5]);
