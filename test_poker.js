@@ -63,14 +63,18 @@ function getHandRank(hand) {
 
   // function to handdle straight
   function isStraight(hand) {
-    const uniqueHand = hand;
+    const uniqueHand = hand.slice();
     console.log(`here unique: ${uniqueHand}`);
+
+    uniqueHand.sort((a, b) => a - b);
+    console.log(`here unique sorted: ${uniqueHand}`);
   }
 }
 
 // let four = getHandRank([3, 3, 3, 3, 5]);
-let full = getHandRank([3, 3, 3, 5, 5]);
-let straight = getHandRank([2, 3, 4, 5, 6]); //here need to handle straight
+// let full = getHandRank([3, 3, 5, 3, 5]);
+let straight = getHandRank([2, 3, 5, 4, 6]);
+//here need to handle straight
 // let three = getHandRank([3, 3, 3, 6, 7]);
 // let twopair = getHandRank([3, 3, 4, 5, 5]);
 // let onepair = getHandRank([3, 3, 4, 5, 6]);
