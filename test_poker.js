@@ -59,9 +59,9 @@ function getHandRank(hand) {
   return rankType;
 }
 
-// let four = getHandRank([3, 3, 3, 3, 5]);
+let four = getHandRank([3, 3, 3, 3, 5]);
 let full = getHandRank([3, 3, 3, 5, 5]);
-let straight = getHandRank([2, 3, 4, 5, 6]);
+let straight = getHandRank([2, 3, 4, 5, 6]); //here need to handle straight
 let three = getHandRank([3, 3, 3, 6, 7]);
 let twopair = getHandRank([3, 3, 4, 5, 5]);
 let onepair = getHandRank([3, 3, 4, 5, 6]);
