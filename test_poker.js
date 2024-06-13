@@ -68,12 +68,23 @@ function getHandRank(hand) {
 
     uniqueHand.sort((a, b) => a - b);
     console.log(`here unique sorted: ${uniqueHand}`);
+
+    if (uniqueHand.length !== 5) return false;
+
+    if (uniqueHand[4] - uniqueHand[0] === 4) return true;
+
+    const specialStraight = [1, 10, 11, 12, 13];
+    for (let i = 0; i < specialStraight.length; i++) {
+      if (uniqueHand[i] !== specialStraight[i]) return false;
+    }
+    return true;
   }
 }
 
 // let four = getHandRank([3, 3, 3, 3, 5]);
 // let full = getHandRank([3, 3, 5, 3, 5]);
-let straight = getHandRank([2, 3, 5, 4, 6]);
+let straight = getHandRank([2, 3, 5, 4, 1]);
+let specialStraight = getHandRank([1, 13, 11, 10, 12]);
 //here need to handle straight
 // let three = getHandRank([3, 3, 3, 6, 7]);
 // let twopair = getHandRank([3, 3, 4, 5, 5]);
