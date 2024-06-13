@@ -48,6 +48,8 @@ function getHandRank(hand) {
     rankType = 'Full house';
   } else if (counts[0] === 3) {
     rankType = 'Three of a kind';
+  } else if (isStraight(hand)) {
+    rankType = 'Straight';
   } else if (counts[0] === 2 && counts[1] === 2) {
     rankType = 'Two pair';
   } else if (counts[0] === 2) {
@@ -55,14 +57,21 @@ function getHandRank(hand) {
   } else {
     rankType = 'High card';
   }
+
   console.log(rankType);
   return rankType;
+
+  // function to handdle straight
+  function isStraight(hand) {
+    const uniqueHand = hand;
+    console.log(`here unique: ${uniqueHand}`);
+  }
 }
 
-let four = getHandRank([3, 3, 3, 3, 5]);
+// let four = getHandRank([3, 3, 3, 3, 5]);
 let full = getHandRank([3, 3, 3, 5, 5]);
 let straight = getHandRank([2, 3, 4, 5, 6]); //here need to handle straight
-let three = getHandRank([3, 3, 3, 6, 7]);
-let twopair = getHandRank([3, 3, 4, 5, 5]);
-let onepair = getHandRank([3, 3, 4, 5, 6]);
-let highcard = getHandRank([2, 3, 4, 5, 8]);
+// let three = getHandRank([3, 3, 3, 6, 7]);
+// let twopair = getHandRank([3, 3, 4, 5, 5]);
+// let onepair = getHandRank([3, 3, 4, 5, 6]);
+// let highcard = getHandRank([2, 3, 4, 5, 8]);
