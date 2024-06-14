@@ -126,4 +126,4 @@ function compareHands(hand1, hand2) {
   console.log(`the best hand is ${bestRank}`);
 }
 
-let compare = compareHands([3, 3, 3, 6, 7], [3, 3, 3, 3, 7]);
+let compare = compareHands([3, 3, 3, 6, 7], [3, 2, 4, 3, 7]);
