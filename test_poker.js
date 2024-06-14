@@ -133,14 +133,19 @@ function compareHands(hand1, hand2) {
 function showWinner(player1, hand1, player2, hand2) {
   const winner = compareHands(hand1, hand2);
   console.log(`Winner: ${winner}`);
+  console.log(`players: ${player1}, ${player2}`);
 
-  return winner;
+  if (winner === 'Player 1') {
+    return player1;
+  } else if (winner === 'Player 2') {
+    return player2;
+  } else return 'draw';
 }
 
 // Example usage:
 const player1 = 'Alice';
 const player2 = 'Bob';
-const hand1 = [6, 13, 13, 13, 13]; // Four of a kind (Kings)
+const hand1 = [6, 12, 13, 13, 13]; // Four of a kind (Kings)
 const hand2 = [2, 3, 4, 5, 6]; // Straight
 
 let test = showWinner(player1, hand1, player2, hand2);
