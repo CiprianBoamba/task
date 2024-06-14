@@ -116,14 +116,33 @@ function compareHands(hand1, hand2) {
 
   let bestRank = '';
   if (rank1Index > rank2Index) {
-    bestRank = 'rank 1';
+    return (bestRank = 'Player 1');
   } else if (rank1Index < rank2Index) {
-    bestRank = 'rank 2';
+    return (bestRank = 'Player 2');
   } else {
-    bestRank = 'draw';
+    return (bestRank = 'draw');
   }
 
   console.log(`the best hand is ${bestRank}`);
 }
 
-let compare = compareHands([3, 3, 3, 6, 7], [3, 2, 4, 3, 7]);
+// let compare = compareHands([3, 3, 3, 6, 7], [3, 2, 4, 3, 7]);
+
+// function to show winner between two players and their hands
+
+function showWinner(player1, hand1, player2, hand2) {
+  const winner = compareHands(hand1, hand2);
+  console.log(`Winner: ${winner}`);
+
+  return winner;
+}
+
+// Example usage:
+const player1 = 'Alice';
+const player2 = 'Bob';
+const hand1 = [6, 13, 13, 13, 13]; // Four of a kind (Kings)
+const hand2 = [2, 3, 4, 5, 6]; // Straight
+
+let test = showWinner(player1, hand1, player2, hand2);
+
+console.log(test);
